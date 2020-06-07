@@ -3,7 +3,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-import * as slideShowImages from "assets";
+import * as slideShowImages from "assets/images";
 import "styles/components/SlideShow.style.sass";
 
 const SlideShow = () => {
