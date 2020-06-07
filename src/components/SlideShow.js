@@ -8,8 +8,11 @@ import "styles/components/SlideShow.style.sass";
 
 const SlideShow = () => {
   let slideShowSettings = {
+    dots: true,
+    infinite: true,
     arrows: false,
     autoplay: true,
+    speed: 2000,
     autoplaySpeed: 2000,
   };
 
@@ -19,7 +22,7 @@ const SlideShow = () => {
     ));
 
   return (
-    <Slider dots {...slideShowSettings}>
+    <Slider {...slideShowSettings}>
       {renderSlideShowImages()}
     </Slider>
   );
