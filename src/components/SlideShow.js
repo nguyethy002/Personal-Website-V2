@@ -22,7 +22,7 @@ const SlideShow = () => {
     ));
 
   return (
-    <Slider {...slideShowSettings}>
+    <Slider {...slideShowSettings} className = "slide-container">
       {renderSlideShowImages()}
     </Slider>
   );
