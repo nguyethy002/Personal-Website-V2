@@ -1,6 +1,6 @@
 import React from "react";
-import { SlideShow } from "../components";
-import "../styles/pages/HomePage.style.sass";
+import { SlideShow } from "components";
+import "styles/pages/HomePage.style.sass";
 
 const HomePage = () => {
   return (

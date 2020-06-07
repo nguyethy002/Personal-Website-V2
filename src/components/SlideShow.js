@@ -3,11 +3,11 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-import * as slideShowImages from "../assets";
+import * as slideShowImages from "assets";
 import "styles/components/SlideShow.style.sass";
 
 const SlideShow = () => {
-  var settings = {
+  let slideShowSettings = {
     arrows: false,
     autoplay: true,
     autoplaySpeed: 2000,
@@ -19,7 +19,7 @@ const SlideShow = () => {
     ));
 
   return (
-    <Slider dots {...settings}>
+    <Slider dots {...slideShowSettings}>
       {renderSlideShowImages()}
     </Slider>
   );
