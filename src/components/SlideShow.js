@@ -8,7 +8,6 @@ import "styles/components/SlideShow.style.sass";
 
 const SlideShow = () => {
   let slideShowSettings = {
-    dots: true,
     infinite: true,
     arrows: false,
     autoplay: true,
