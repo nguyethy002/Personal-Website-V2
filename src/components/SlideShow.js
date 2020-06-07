@@ -1,22 +1,27 @@
 import React from "react";
-import Slider from "infinite-react-carousel";
-import { image1, image2, image3 } from "../assets";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
+import * as slideShowImages from "../assets";
 import "styles/components/SlideShow.style.sass";
 
 const SlideShow = () => {
-  const settings =  {
+  var settings = {
     arrows: false,
     autoplay: true,
-    autoplaySpeed: 2000
+    autoplaySpeed: 2000,
   };
+
+  const renderSlideShowImages = () =>
+    Object.values(slideShowImages).map((image, index) => (
+      <img src={image} key={index} alt={`slideShow ${index}`} />
+    ));
+
   return (
-    <div>
-      <Slider dots { ...settings }>
-        <img  src={image1} alt="slide1" />
-        <img  src={image2} alt="slide2" />
-        <img  src={image3} alt="slide3" />
-      </Slider>
-    </div>
+    <Slider dots {...settings}>
+      {renderSlideShowImages()}
+    </Slider>
   );
 };
 

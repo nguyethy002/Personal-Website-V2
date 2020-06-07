@@ -1,4 +1,4 @@
 
-export const image1 = require("./image1.jpg");
-export const image2 = require("./image2.jpg");
-export const image3 = require("./image3.jpg");
+export const slideImage1 = require("./slideImage1.jpg");
+export const slideImage2 = require("./slideImage2.jpg");
+export const slideImage3 = require("./slideImage3.jpg");
