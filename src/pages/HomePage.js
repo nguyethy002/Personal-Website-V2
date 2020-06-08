@@ -7,8 +7,9 @@ const HomePage = () => {
     <div className="home-container">
       <Header/>
       <div className="home-welcome">
-        <SlideShow />
+        <SlideShow/>
       </div>
+      
     </div>
   );
 };
