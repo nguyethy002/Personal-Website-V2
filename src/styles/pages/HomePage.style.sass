@@ -4,4 +4,28 @@
   &-welcome 
     @apply flex flex-col 
     @apply items-center justify-center 
+  &-about
+    @apply flex flex-col-reverse
+    @apply items-center justify-center
+    @apply h-screen
+    &-des
+      @apply px-4
+      @screen lg
+        @apply px-16
+    p
+      @apply text-gray-800
+      @apply text-left
+      @apply leading-10
+    h2 
+      @apply text-gray-900
+      @apply text-left
+      
+    img
+      @screen lg
+        @apply w-6/12 
+        
+    @screen lg
+      @apply flex-row
+    
+      
     
