@@ -2,13 +2,51 @@
   &-container
     @apply flex flex-row 
     @apply justify-between
-    @apply px-10 py-2
-    @apply w-screen
+    @apply fixed top-0
+    @apply w-full z-20
+    @apply px-5 py-2
+    
     img 
-      @apply w-16
+      @apply w-12
+      @apply text-white
+
   &-menu
-    @apply flex flex-row
-    @apply items-center justify-between
-    @apply w-3/12
-    h3
-      @apply
+    @apply hidden
+
+    @screen lg
+      @apply flex flex-row
+      @apply items-center 
+      a
+        @apply pl-5
+
+  &-hamburger
+    @apply flex items-center
+
+    @screen lg
+      @apply hidden
+
+.navbar-overlay
+  @apply flex flex-col 
+  @apply justify-center 
+  @apply px-16
+  @apply fixed top-0 bottom-0 left-0 right-0
+  @apply pointer-events-none
+  @apply transform translate-x-full
+  @apply transition duration-700 ease-in-out
+  @apply bg-black 
+  z-index: -1
+
+
+  @screen md
+    @apply px-20
+
+  &-active
+    @apply transform translate-x-0
+    @apply pointer-events-auto opacity-100
+
+.navbar-item
+  @apply text-white 
+  @apply duration-200
+
+  &-active
+    @apply opacity-100
