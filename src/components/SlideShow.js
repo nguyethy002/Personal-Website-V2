@@ -8,7 +8,6 @@ import "styles/components/SlideShow.style.sass";
 
 const SlideShow = () => {
   let slideShowSettings = {
-    dots: true,
     infinite: true,
     arrows: false,
     autoplay: true,
@@ -22,9 +21,14 @@ const SlideShow = () => {
     ));
 
   return (
-    <Slider {...slideShowSettings}>
-      {renderSlideShowImages()}
-    </Slider>
+    <div className="slider-container">
+      <div className="slider-caption">
+        <h1>Welcome to the Capitol</h1>
+        <p>It is our absolute pleasure to be returning to Capitol</p>
+      </div>
+
+      <Slider {...slideShowSettings}>{renderSlideShowImages()}</Slider>
+    </div>
   );
 };
 
