@@ -26,6 +26,7 @@ const SlideShow = () => {
         <h1>Welcome to the Capitol</h1>
         <p>It is our absolute pleasure to be returning to Capitol</p>
       </div>
+
       <Slider {...slideShowSettings}>{renderSlideShowImages()}</Slider>
     </div>
   );
