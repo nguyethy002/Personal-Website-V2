@@ -22,13 +22,11 @@ const SlideShow = () => {
 
   return (
     <div className="slider-container">
-      <div className="slider-image-container">
-        <div className="slider-image-caption">
-          <h1>Welcome to the Capitol</h1>
-          <p>It is our absolute pleasure to be returning to Capitol</p>
-        </div>
-        <Slider {...slideShowSettings}>{renderSlideShowImages()}</Slider>
+      <div className="slider-caption">
+        <h1>Welcome to the Capitol</h1>
+        <p>It is our absolute pleasure to be returning to Capitol</p>
       </div>
+      <Slider {...slideShowSettings}>{renderSlideShowImages()}</Slider>
     </div>
   );
 };
