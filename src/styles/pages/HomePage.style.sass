@@ -5,15 +5,37 @@
   &-welcome 
     @apply flex flex-col 
     @apply items-center justify-center 
-  &-about
-    @apply flex flex-col-reverse
-    @apply items-center justify-center
     @apply h-screen
+    @apply mb-10
+    @screen md
+        @apply mb-0
+    h2
+    #welcomeImage
+      @apply h-20
+      @apply bg-white
+      outline: 5px solid #231f20
+      outline-offset: -10px
+      @screen md
+        @apply h-40
+    &-slider
+      @apply flex flex-col 
+      @apply justify-center items-center
+      @apply absolute z-10
+      @apply h-screen w-full
+      @apply bg-black bg-opacity-50
+  &-about
+    @apply flex flex-col
+    @apply items-center justify-center
+    @apply mb-10
+    @screen md
+        @apply mb-0
     img
-      @screen lg
-        @apply w-6/12 
+      @apply object-cover
+      @apply w-screen
+      @screen md
+        @apply w-6/12
     &-des
-      @apply px-4
+      @apply px-4 
       @screen lg
         @apply px-16
       p
@@ -24,8 +46,36 @@
         @apply text-gray-900
         @apply text-left
         @apply mb-5
-    @screen lg
+    @screen md
       @apply flex-row
+  &-menu
+    @apply flex flex-col 
+    @apply items-center justify-center
+    @apply mb-10
+    @screen md
+        @apply mb-0
+    h2
+      @apply mb-10
+      @screen md
+        @apply hidden
+    &-image
+      @apply flex flex-row flex-wrap
+    &-title
+      @apply w-3/6 h-full relative
+      @apply bg-black bg-opacity-50
+      h3
+        @apply w-full h-full
+        @apply absolute z-10 top-0
+        @apply flex flex-col 
+        @apply justify-center items-center
+        @apply bg-gray-500 bg-opacity-25
+      
+        
+    
+          
+         
+          
+     
     
       
     

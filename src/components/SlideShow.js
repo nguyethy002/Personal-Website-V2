@@ -11,8 +11,8 @@ const SlideShow = () => {
     infinite: true,
     arrows: false,
     autoplay: true,
-    speed: 2000,
-    autoplaySpeed: 2000,
+    speed: 3000,
+    autoplaySpeed: 3000,
   };
 
   const renderSlideShowImages = () =>
@@ -22,12 +22,7 @@ const SlideShow = () => {
 
   return (
     <div className="slider-container">
-      <div className="slider-caption">
-        <h1>Welcome to the Capitol</h1>
-        <p>It is our absolute pleasure to be returning to Capitol</p>
-      </div>
-
-      <Slider {...slideShowSettings}>{renderSlideShowImages()}</Slider>
+      <Slider {...slideShowSettings} className="slider-image">{renderSlideShowImages()}</Slider>
     </div>
   );
 };

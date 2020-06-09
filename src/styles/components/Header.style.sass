@@ -5,7 +5,10 @@
     @apply fixed top-0
     @apply w-full z-20
     @apply px-5 py-2
-    
+    @apply bg-gray-900
+    @apply duration-500
+    &-at-top
+      @apply bg-transparent
     img 
       @apply w-12
       @apply text-white
@@ -17,7 +20,7 @@
       @apply flex flex-row
       @apply items-center 
       a
-        @apply pl-5
+        @apply pl-10
 
   &-hamburger
     @apply flex items-center
@@ -33,7 +36,7 @@
   @apply pointer-events-none
   @apply transform translate-x-full
   @apply transition duration-700 ease-in-out
-  @apply bg-black 
+  @apply bg-gray-900
   z-index: -1
 
 

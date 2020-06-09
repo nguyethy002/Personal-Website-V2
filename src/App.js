@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Header } from "components";
+import { Header, Footer } from "components";
 import { HomePage } from "pages";
 import "App.css";
 import "styles/general.style.sass";
@@ -11,9 +11,9 @@ function App() {
     <div className="app">
       <Header />
 
-      <div>
-        <HomePage />
-      </div>
+      <HomePage />
+
+      <Footer/>
     </div>
   );
 }

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-scroll";
 
 import "styles/components/Header.style.sass";
@@ -8,21 +8,37 @@ const headerLogo = require("assets/logo/capitolLogoWhite.svg");
 
 const sectionInfo = [
   {
-    to: "home",
+    to: "home-welcome",
     displayTitle: "Home",
   },
   {
-    to: "about",
+    to: "home-about",
     displayTitle: "About",
   },
   {
-    to: "contact",
-    displayTitle: "Contact",
+    to: "home-menu",
+    displayTitle: "Menu",
   },
 ];
 
 const Header = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [atTop, setAtTop] = useState(true);
+
+  useEffect(() => {
+    const checkAtTop = () => {
+      const isTop = window.scrollY < 5;
+      if (isTop !== atTop) {
+        setAtTop(isTop);
+      }
+    };
+
+    document.addEventListener("scroll", checkAtTop);
+    return () => {
+      document.removeEventListener("scroll", checkAtTop);
+    };
+  }, [atTop]);
+
   const HeaderLink = ({ displayTitle, to }) => {
     return (
       <Link
@@ -41,7 +57,7 @@ const Header = () => {
   };
 
   return (
-    <div className="header-container">
+    <div className={`header-container ${atTop ? "header-container-at-top" : ""}`}>
       <img src={headerLogo} id="logo" alt="top logo" />
 
       <div className="header-menu">
