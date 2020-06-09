@@ -1,0 +1,42 @@
+$transition-timer: 0.2s
+.hamburger
+  @apply relative flex justify-center items-center
+  @apply transition duration-700 ease-in-out
+
+  &-active
+    span
+      @apply bg-transparent #{!important}
+      filter: opacity(0.9)
+      &::before
+        transform: rotate(45deg) !important
+      &::after
+        transform: rotate(-45deg) !important
+
+  &:focus
+    @apply outline-none
+    span
+      filter: opacity(0.9)
+
+  span
+    @apply bg-white // TODO: đổi màu theo ý e
+    @apply relative w-6 h-1 rounded-full ease-in-out
+    transition: all $transition-timer
+    filter: opacity(0.8)
+
+    @screen md
+      @apply w-10
+
+    &::before,
+    &::after
+      @apply bg-white // TODO: đổi màu theo ý e
+      @apply w-6 h-1 left-0 absolute rounded-full ease-in-out
+      content: ''
+      transition: all $transition-timer
+
+      @screen md
+        @apply w-10
+
+    &::before
+      transform: translateY(-0.5rem)
+    &::after
+      transform: translateY(0.5rem)
