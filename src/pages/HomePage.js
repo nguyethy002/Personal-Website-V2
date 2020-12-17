@@ -1,46 +1,64 @@
 import React from "react";
+import YouTube from "react-youtube";
 
-import { SlideShow } from "components";
 import { menuImageList } from "assets/menu";
 import "styles/pages/HomePage.style.sass";
 
-const aboutImage = require("assets/about/aboutImage.jpeg");
-const welcomeImage = require("assets/welcome/welcomeImage2.png");
+const aboutImage = require("assets/about/aboutImage2.png");
+const welcomeImage = require("assets/welcome/welcomeImage.png");
 
 const HomePage = () => {
   const renderMenuImages = () =>
     Object.values(menuImageList).map(({ src, title }, index) => (
-      <div className="home-menu-title" key={index}>
+      <div className="home-project-card" key={index}>
         <img src={src} alt={`menu ${index}`} />
         <h3>___{title}___</h3>
       </div>
     ));
+
+  const opts = {
+    playerVars: {
+      // autoplay: 1,
+    },
+  };
+
   return (
     <div className="home-container">
       <div className="home-welcome">
-        <div className="home-welcome-slider">
-          <img src={welcomeImage} id="welcomeImage" alt="capital bar" />
-          <p>Full Craft Bar · Vegan Menu · Karaoke</p>
-        </div>
-        <SlideShow />
+        <img src={welcomeImage} id="welcomeImage" alt="tea nguyen" />
+        <h3>"You don't have to be fearless, just don't let fear stops you"</h3>
       </div>
       <div className="home-about">
         <div className="home-about-des">
-          <h2>About Us</h2>
+          <h2>What I can do</h2>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
-            eget diam nunc. Cras eget bibendum sapien. Curabitur porta nulla at
-            metus consectetur molestie. Fusce leo turpis, lobortis et tincidunt
-            vitae, placerat vel purus. Pellentesque malesuada felis metus,
-            maximus fermentum velit pellentesque sit amet. Donec mattis leo in
-            ultricies elementum.
+            I could make your website looks good. Beside that, I enjoy my life
+            by drawing and playing guitar. If you are looking for a person who
+            has good tatse in making website, give me a call :D
           </p>
         </div>
-        <img src={aboutImage} id="aboutImage" alt="capital bar" />
+        <div className="home-about-image">
+          <img src={aboutImage} id="aboutImage" alt="thy standing" />
+        </div>
       </div>
-      <div className="home-menu">
-        <h2>Our menu</h2>
-        <div className="home-menu-image">{renderMenuImages()} </div>
+      <div className="home-more">
+        <div className="home-more-des">
+          <h2>More about me</h2>
+          <ul>
+            Beside coding, I spend my time to:
+            <li>❀ Play the guitar</li>
+            <li>❀ Drawing</li>
+            <li>❀ Streaming</li>
+          </ul>
+          <button id="homeMoreButton">Follow my stream</button>
+        </div>
+        <div className="home-more-video">
+          <YouTube videoId="jJu_wgj9UGs" opts={opts} id="homeMoreVideo" />
+        </div>
+      </div>
+      <div className="home-project">
+        <h2>Recent Projects</h2>
+        <div className="home-project-image">{renderMenuImages()} </div>
       </div>
     </div>
   );

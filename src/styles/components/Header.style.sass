@@ -3,9 +3,11 @@
     @apply flex flex-row 
     @apply justify-between
     @apply fixed top-0
+    @screen lg
+      @apply sticky
     @apply w-full z-20
     @apply px-5 py-2
-    @apply bg-gray-900
+    @apply bg-yellow-100
     @apply duration-500
     &-at-top
       @apply bg-transparent
@@ -15,7 +17,6 @@
 
   &-menu
     @apply hidden
-
     @screen lg
       @apply flex flex-row
       @apply items-center 
@@ -24,7 +25,6 @@
 
   &-hamburger
     @apply flex items-center
-
     @screen lg
       @apply hidden
 
@@ -36,7 +36,7 @@
   @apply pointer-events-none
   @apply transform translate-x-full
   @apply transition duration-700 ease-in-out
-  @apply bg-gray-900
+  @apply bg-orange-200
   z-index: -1
 
 
@@ -48,7 +48,7 @@
     @apply pointer-events-auto opacity-100
 
 .navbar-item
-  @apply text-white 
+  @apply text-gray-900
   @apply duration-200
 
   &-active

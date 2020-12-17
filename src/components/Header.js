@@ -4,7 +4,7 @@ import { Link } from "react-scroll";
 import "styles/components/Header.style.sass";
 import "styles/components/common/hamburgers.sass";
 
-const headerLogo = require("assets/logo/capitolLogoWhite.svg");
+const headerLogo = require("assets/logo/teaLogo.png");
 
 const sectionInfo = [
   {
@@ -16,8 +16,12 @@ const sectionInfo = [
     displayTitle: "About",
   },
   {
-    to: "home-menu",
-    displayTitle: "Menu",
+    to: "home-more",
+    displayTitle: "More",
+  },
+  {
+    to: "home-project",
+    displayTitle: "Project",
   },
 ];
 

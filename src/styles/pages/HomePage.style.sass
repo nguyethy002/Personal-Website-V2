@@ -4,39 +4,34 @@
     @apply justify-center 
   &-welcome 
     @apply flex flex-col 
-    @apply items-center justify-center 
+    @apply items-center justify-evenly
     @apply h-screen
-    @apply mb-10
-    @screen md
-        @apply mb-0
-    h2
-    #welcomeImage
-      @apply h-20
-      @apply bg-white
-      outline: 5px solid #231f20
-      outline-offset: -10px
-      @screen md
-        @apply h-40
-    &-slider
-      @apply flex flex-col 
-      @apply justify-center items-center
-      @apply absolute z-10
-      @apply h-screen w-full
-      @apply bg-black bg-opacity-50
+    @screen lg
+      @apply h-auto
+    img
+      @screen lg
+        @apply my-20
+    h3
+      @apply italic
+      @screen lg
+        @apply my-20
   &-about
     @apply flex flex-col
-    @apply items-center justify-center
-    @apply mb-10
-    @screen md
-        @apply mb-0
-    img
-      @apply object-cover
-      @apply w-screen
-      @screen md
-        @apply w-6/12
+    @apply items-center justify-evenly
+    @apply h-screen
+    @screen lg
+      @apply h-auto
+      @apply my-20
+    &-image
+      @apply h-64
+      @screen lg
+        @apply w-1/2
+      img
+        @apply h-full
     &-des
       @apply px-4 
       @screen lg
+        @apply w-1/2
         @apply px-16
       p
         @apply text-gray-800
@@ -46,36 +41,68 @@
         @apply text-gray-900
         @apply text-left
         @apply mb-5
-    @screen md
+    @screen lg
       @apply flex-row
-  &-menu
+  &-more
+    @apply flex flex-col
+    @apply items-center justify-evenly
+    @apply px-4
+    @apply h-screen
+    @screen lg
+      @apply flex-row-reverse
+      @apply h-auto
+      @apply my-20
+      @apply px-0
+   
+    &-video
+      @screen lg
+        @apply w-1/2
+    #homeMoreVideo
+      @apply px-4
+      @apply object-cover
+      @apply w-screen
+      @apply border-orange-300 border-dashed border-4 
+      @apply rounded-lg
+      @apply p-2
+      @screen lg
+        @apply w-full
+    #homeMoreButton
+      @apply text-gray-900 text-xl font-medium
+      @apply p-3
+      @apply bg-orange-300 outline-none
+      @apply rounded-lg
+      &:hover
+        @apply bg-orange-400
+    &-des
+      ul, li
+        @apply text-gray-800
+        @apply text-left
+        @apply leading-10
+      ul
+        @apply my-5
+      h2 
+        @apply text-gray-900
+        @apply text-left
+    
+  &-project
     @apply flex flex-col 
-    @apply items-center justify-center
-    @apply mb-10
-    @screen md
-        @apply mb-0
-    h2
-      @apply mb-10
-      @screen md
-        @apply hidden
+    @apply items-center justify-evenly
+    @screen lg
+      @apply my-20
     &-image
-      @apply flex flex-row flex-wrap
-    &-title
-      @apply w-3/6 h-full relative
+      @apply flex flex-col
+      @apply items-center justify-center
+      @screen lg
+        @apply flex-row 
+    &-card
+      @apply h-full relative
       @apply bg-black bg-opacity-50
-      h3
+      &:hover > h3
+        @apply bg-gray-500 bg-opacity-25
         @apply w-full h-full
         @apply absolute z-10 top-0
-        @apply flex flex-col 
+        @apply flex flex-col
         @apply justify-center items-center
-        @apply bg-gray-500 bg-opacity-25
-      
-        
-    
-          
-         
-          
-     
-    
-      
-    
+      h3
+        @apply transition duration-700 ease-in-out
+        @apply hidden

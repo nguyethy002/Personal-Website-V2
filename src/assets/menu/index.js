@@ -11,8 +11,4 @@ export const menuImageList = [
     src: require("./salad.jpg"),
     title: "Salad",
   },
-  {
-    src: require("./burger.jpg"),
-    title: "Burger",
-  },
 ];
